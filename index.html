@@ -1,0 +1,792 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAIRAJ INNOVATIONS | SPM & Fixture Design</title>
+
+    <meta name="description"
+          content="SAIRAJ INNOVATIONS - SPM Design, Welding Fixtures, Automation, Machine Design and CATIA 3D CAD Services.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f7f9fc;
+        }
+
+        /* HEADER */
+        header {
+            background: #0b1f3a;
+            color: white;
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #00a8ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #00a8ff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 7%;
+            background:
+                linear-gradient(rgba(5,20,40,0.80), rgba(5,20,40,0.80)),
+                url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #00a8ff;
+        }
+
+        .hero p {
+            font-size: 21px;
+            margin-bottom: 30px;
+            color: #e5e5e5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            margin-right: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #00a8ff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0088cc;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0b1f3a;
+        }
+
+        /* COMMON */
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #0b1f3a;
+        }
+
+        .section-title p {
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* ABOUT */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about h3 {
+            font-size: 30px;
+            color: #0b1f3a;
+            margin-bottom: 15px;
+        }
+
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            border-top: 4px solid #00a8ff;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #0b1f3a;
+            margin-bottom: 10px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            background: #eef3f8;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-card div {
+            padding: 20px;
+        }
+
+        .project-card h3 {
+            color: #0b1f3a;
+            margin-bottom: 5px;
+        }
+
+        /* WHY US */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .why-card {
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .why-card h3 {
+            color: #0b1f3a;
+            margin: 10px 0;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #0b1f3a;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            font-size: 17px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .contact-form textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #061426;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .services-grid,
+            .project-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 55px 5%;
+            }
+
+            .services-grid,
+            .project-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 75vh;
+                padding: 40px 5%;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        SAIRAJ <span>INNOVATIONS</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            SAIRAJ <span>INNOVATIONS</span>
+        </h1>
+
+        <p>
+            SPM Design | Welding Fixtures | Automation |
+            Machine Design | 3D CAD & CATIA Design
+        </p>
+
+        <a href="#services" class="btn btn-primary">
+            Our Services
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            Get Quote
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <div class="section-title">
+        <h2>About Us</h2>
+        <p>Engineering Design & Automation Solutions</p>
+    </div>
+
+    <div class="about">
+
+        <div>
+            <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80"
+                alt="Engineering Design">
+        </div>
+
+        <div>
+
+            <h3>Engineering Solutions That Work</h3>
+
+            <p>
+                SAIRAJ INNOVATIONS provides mechanical engineering
+                design solutions for Special Purpose Machines,
+                welding fixtures, automation fixtures and
+                industrial machinery.
+            </p>
+
+            <br>
+
+            <p>
+                We focus on practical, reliable and
+                manufacturing-friendly designs using modern
+                3D CAD tools and engineering methods.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Mechanical Design & Engineering Services</p>
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <div class="service-icon">⚙️</div>
+            <h3>SPM Design</h3>
+            <p>
+                Special Purpose Machine design, mechanism
+                development, pneumatic and automation concepts.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔩</div>
+            <h3>Welding Fixtures</h3>
+            <p>
+                Welding fixture design, clamping systems,
+                locating systems and production fixtures.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🤖</div>
+            <h3>Automation</h3>
+            <p>
+                Industrial automation concepts, pneumatic
+                systems and machine mechanisms.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>3D CAD Design</h3>
+            <p>
+                3D modelling, assembly design and detailed
+                mechanical engineering design.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📐</div>
+            <h3>CATIA Design</h3>
+            <p>
+                CATIA based part modelling, assembly design
+                and manufacturing drawings.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🏭</div>
+            <h3>Machine Design</h3>
+            <p>
+                Industrial machine design, fabrication concepts
+                and engineering documentation.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+
+    <div class="section-title">
+        <h2>Our Projects</h2>
+        <p>Selected Engineering Projects</p>
+    </div>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1565439397797-7c2f2a6e2a4e?auto=format&fit=crop&w=900&q=80"
+                alt="SPM Machine">
+
+            <div>
+                <h3>Special Purpose Machine</h3>
+                <p>Custom automated machine design.</p>
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80"
+                alt="Welding Fixture">
+
+            <div>
+                <h3>Welding Fixture</h3>
+                <p>Production welding fixture development.</p>
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=900&q=80"
+                alt="Automation">
+
+            <div>
+                <h3>Automation System</h3>
+                <p>Pneumatic and mechanical automation solution.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section>
+
+    <div class="section-title">
+        <h2>Why Choose Us</h2>
+        <p>Our Engineering Approach</p>
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="service-icon">🎯</div>
+            <h3>Precision</h3>
+            <p>
+                Focus on accurate and practical engineering design.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="service-icon">💡</div>
+            <h3>Innovation</h3>
+            <p>
+                Efficient and application-oriented solutions.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="service-icon">⏱️</div>
+            <h3>Timely Delivery</h3>
+            <p>
+                Commitment to project schedules and requirements.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="service-icon">🤝</div>
+            <h3>Customer Focus</h3>
+            <p>
+                Solutions designed around customer requirements.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Let's discuss your next engineering project.</p>
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-info">
+
+            <h3>SAIRAJ INNOVATIONS</h3>
+
+            <p>
+                📍 Pune / Pimpri-Chinchwad, Maharashtra, India
+            </p>
+
+            <p>
+                📞 <a href="tel:+919730127775"
+                       style="color:white;">
+                       +91 97301 27775
+                   </a>
+            </p>
+
+            <p>
+                💬 WhatsApp:
+                <a href="https://wa.me/919730127775"
+                   target="_blank"
+                   style="color:#25D366;">
+                   Chat Now
+                </a>
+            </p>
+
+            <p>
+                ✉️ info@sairajinnovations.com
+            </p>
+
+            <p>
+                ⚙️ SPM Design | Fixtures | Automation | CAD
+            </p>
+
+        </div>
+
+
+        <form class="contact-form"
+              onsubmit="sendWhatsApp(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Mobile Number"
+                required>
+
+            <input
+                type="text"
+                id="subject"
+                placeholder="Project / Requirement"
+                required>
+
+            <textarea
+                id="message"
+                placeholder="Tell us about your requirement..."
+                required></textarea>
+
+            <button
+                type="submit"
+                class="btn btn-primary">
+                Send Enquiry on WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 <strong>SAIRAJ INNOVATIONS</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        📞 +91 97301 27775
+    </p>
+
+</footer>
+
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a
+    class="whatsapp"
+    href="https://wa.me/919730127775"
+    target="_blank"
+    title="Chat on WhatsApp">
+
+    ☎
+
+</a>
+
+
+<script>
+
+function sendWhatsApp(event) {
+
+    event.preventDefault();
+
+    let name =
+        document.getElementById("name").value;
+
+    let phone =
+        document.getElementById("phone").value;
+
+    let subject =
+        document.getElementById("subject").value;
+
+    let message =
+        document.getElementById("message").value;
+
+    let text =
+        "New Enquiry - SAIRAJ INNOVATIONS\n\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Requirement: " + subject + "\n" +
+        "Message: " + message;
+
+    let whatsappNumber = "919730127775";
+
+    window.open(
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(text),
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
+```
+
